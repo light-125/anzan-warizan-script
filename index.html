@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あまりのある割り算の暗算練習</title>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@6.11.5/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@6.11.5/dist/sweetalert2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/light-125/souko@main/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/light-125/souko@main/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/light-125/souko@main/favicon-16x16.png">
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/light-125/souko@main/manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/light-125/souko@main/fon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/light-125/souko@main/style.css">
+</head>
+<body>
+    <header>
+        <h1>あまりのある割り算の暗算練習</h1>
+    </header>
+    <main>
+        <section class="difficulty-section">
+            難易度：
+            <label><input type="radio" name="difficulty" value="EASY"> EASY(1桁)</label>
+            <label><input type="radio" name="difficulty" value="MEDIUM" checked> MEDIUM(2桁)</label>
+            <label><input type="radio" name="difficulty" value="HARD"> HARD(3桁)</label>
+            <label><input type="radio" name="difficulty" value="BLACK"> BLACK(4-10桁)</label>
+        </section>
+        <section class="question-section">
+            <div style="font-size:1.5rem;">現在：<span class="count" style="font-size:2rem; color:#2c3e50;">1</span> 問目 / 全15問</div>
+            <div class="question-display"></div>
+        </section>
+        <section class="answer-section">
+            <label for="kotae">答え</label><input type="number" id="kotae">
+            <label for="amari">あまり</label><input type="number" id="amari">
+            <button type="button" id="next-btn" class="next-btn">次の問題へ</button>
+        </section>
+        <section class="dashboard-section">
+            <h2 style="font-size:1.3rem; margin:0 0 10px 0;">📊 過去の記録</h2>
+            <p style="margin:5px 0;">・最高正解数: <span id="hi-disp" style="color:#27ae60;">0</span> 問 / 平均正解数: <span id="avg-disp" style="color:#2980b9;">0</span> 問</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 暗算練習アプリケーション</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/gh/light-125/souko@main/script.js"></script>
+</body>
+</html>
